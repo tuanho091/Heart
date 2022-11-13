@@ -50,7 +50,15 @@
 </HEAD>
 
 <BODY>
-
+    <!-- <iframe src="source.mp3" allow="autoplay" id="audio" style="display: none">
+        <audio id="player" autoplay loop>
+            <source src="source.mp3" type="audio/mp3">
+        </audio>
+    </iframe> -->
+    <audio autoplay>
+        <source src="source.mp3">
+    </audio>
+    
     <canvas id="pinkboard">
         <canvas id="pinkboard">
         </canvas>
@@ -314,6 +322,10 @@
                 render();
             }, 10);
         })(document.getElementById('pinkboard'));
+        
+        window.onload = function() {
+            var context = new AudioContext();
+        }
     </script>
 </BODY>
 
